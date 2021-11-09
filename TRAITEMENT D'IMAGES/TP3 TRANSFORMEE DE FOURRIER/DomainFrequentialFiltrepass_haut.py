@@ -19,7 +19,7 @@ r = 40
 center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 mask_area = (x - center[0]) ** 2 + (y - center[1]) ** 2 <= r*r
-mask[mask_area] = 1
+mask[mask_area] = 0
 
 # on applique masque et calcul la transformee inverse de fourrier
 fshift = dft_shift * mask
